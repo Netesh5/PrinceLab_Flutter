@@ -19,7 +19,15 @@ class _HomepageState extends State<Homepage> {
           const SizedBox(
             height: 20,
           ),
-          const videoPlayer() //Nav bar design
+          const videoPlayer(),
+          //Nav bar design
+          Container(
+              height: 200,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("Assets/original.jpg"), fit: BoxFit.fill),
+              )),
         ],
       ),
     );
