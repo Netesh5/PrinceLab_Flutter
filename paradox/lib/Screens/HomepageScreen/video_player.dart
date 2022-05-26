@@ -18,9 +18,11 @@ class _videoPlayerState extends State<videoPlayer> {
       _youtubePlayerController = YoutubePlayerController(
           initialVideoId: 'dpEPNioJ1Ik', //Video id of provide youtube video
           params: const YoutubePlayerParams(
-              showControls: false,
-              showFullscreenButton: false,
-              autoPlay: true));
+            showControls: false,
+            showFullscreenButton: false,
+            autoPlay: true,
+            enableJavaScript: true,
+          ));
     });
   }
 
