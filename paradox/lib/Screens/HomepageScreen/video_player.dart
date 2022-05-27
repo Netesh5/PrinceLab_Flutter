@@ -14,15 +14,22 @@ class _videoPlayerState extends State<videoPlayer> {
   void initState() {
     // TODO: implement initState
     super.initState();
+
     setState(() {
-      _youtubePlayerController = YoutubePlayerController(
-          initialVideoId: 'dpEPNioJ1Ik', //Video id of provide youtube video
-          params: const YoutubePlayerParams(
-            showControls: false,
-            showFullscreenButton: false,
-            autoPlay: true,
-            enableJavaScript: true,
-          ));
+      try {
+        _youtubePlayerController = YoutubePlayerController(
+            initialVideoId: 'dpEPNioJ1Ik', //Video id of provide youtube video
+            params: const YoutubePlayerParams(
+              showControls: false,
+              showFullscreenButton: false,
+              enableJavaScript: true,
+              loop: true,
+              autoPlay: true,
+              desktopMode: true,
+            ));
+      } catch (e) {
+        debugPrint(e.toString());
+      }
     });
   }
 
@@ -38,20 +45,3 @@ class _videoPlayerState extends State<videoPlayer> {
     );
   }
 }
-
-// Widget videoPlayers(context) {
-//   YoutubePlayerController _youtubePlayerController = YoutubePlayerController(
-//       initialVideoId: 'dpEPNioJ1Ik', //Video id of provide youtube video
-//       params: const YoutubePlayerParams(
-//           showControls: false,
-//           showFullscreenButton: false,
-//           autoPlay: true)); //Instance of video Controller
-//   return Container(
-//     decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
-//     width: MediaQuery.of(context).size.width * 0.96,
-//     height: 300,
-//     child: YoutubePlayerIFrame(
-//       controller: _youtubePlayerController,
-//     ),
-//   );
-// }
