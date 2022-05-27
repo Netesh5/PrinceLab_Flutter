@@ -33,7 +33,7 @@ class _HomepageState extends State<Homepage> {
                     child: Text(
                       "Building the future",
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
                     ),
                   ),
                 ),

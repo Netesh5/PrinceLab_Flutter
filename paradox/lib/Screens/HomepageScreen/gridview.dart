@@ -4,6 +4,7 @@ Widget gridViewImages(context) {
   return Column(
     children: [
       Row(
+        // for creating two images
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
@@ -16,6 +17,7 @@ Widget gridViewImages(context) {
                     fit: BoxFit.cover)),
           ),
           Container(
+            //wraping the content with conatiner
             alignment: Alignment.topLeft,
             height: 200,
             width: 200,
@@ -44,9 +46,11 @@ Widget gridViewImages(context) {
         ],
       ),
       SizedBox(
+        //for creating the space
         height: 40,
       ),
       Row(
+        // for second part of the images
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
@@ -69,18 +73,21 @@ Widget gridViewImages(context) {
         ],
       ),
       const SizedBox(
+        //for creating the space between two items
         height: 20,
       ),
       Container(
+        //Last image
         height: 300,
         width: MediaQuery.of(context).size.width * 0.9,
         child: Padding(
           padding: EdgeInsets.only(top: 20.0),
           child: Stack(
+            //using stack to create overlapping container
             alignment: Alignment.topCenter,
             children: [
               Container(
-                height: 200,
+                height: 180,
                 width: MediaQuery.of(context).size.width * 0.7,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 20.0),

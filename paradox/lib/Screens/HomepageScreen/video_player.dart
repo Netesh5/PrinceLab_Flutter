@@ -44,4 +44,11 @@ class _videoPlayerState extends State<videoPlayer> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _youtubePlayerController.close();
+    super.dispose();
+  }
 }
