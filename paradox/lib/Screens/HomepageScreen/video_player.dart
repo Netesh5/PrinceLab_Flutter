@@ -23,6 +23,7 @@ class _videoPlayerState extends State<videoPlayer> {
                 showControls: false,
                 showFullscreenButton: false,
                 loop: true,
+                autoPlay: true,
                 desktopMode: false,
                 enableJavaScript: true));
       } catch (e) {
