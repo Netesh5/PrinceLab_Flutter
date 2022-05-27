@@ -20,13 +20,11 @@ class _videoPlayerState extends State<videoPlayer> {
         _youtubePlayerController = YoutubePlayerController(
             initialVideoId: 'dpEPNioJ1Ik', //Video id of provide youtube video
             params: const YoutubePlayerParams(
-              showControls: false,
-              showFullscreenButton: false,
-              enableJavaScript: true,
-              loop: true,
-              autoPlay: true,
-              desktopMode: true,
-            ));
+                showControls: false,
+                showFullscreenButton: false,
+                loop: true,
+                desktopMode: false,
+                enableJavaScript: true));
       } catch (e) {
         debugPrint(e.toString());
       }
@@ -40,7 +38,7 @@ class _videoPlayerState extends State<videoPlayer> {
       width: MediaQuery.of(context).size.width * 0.96,
       height: 300,
       child: YoutubePlayerIFrame(
-        controller: _youtubePlayerController,
+        controller: _youtubePlayerController, //providing controll
       ),
     );
   }

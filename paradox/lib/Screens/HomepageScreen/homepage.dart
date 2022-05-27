@@ -45,9 +45,10 @@ class _HomepageState extends State<Homepage> {
                       opacity: 0.6),
                 )),
             const SizedBox(
+              //for creating space
               height: 20,
             ),
-            gridViewImages(context),
+            gridViewImages(context), //grid images
           ],
         ),
       ),

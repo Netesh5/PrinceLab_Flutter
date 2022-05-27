@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:paradox/Screens/HomepageScreen/homepage.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(myApp());
 }
 
